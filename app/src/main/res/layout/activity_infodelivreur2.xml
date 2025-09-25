@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="5dp"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView16"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/mapmarkerblue" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="0dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/adlam_display"
+                            android:text="Localisation "
+                            android:textColor="@color/usedred"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/adlam_display"
+                            android:text="Supérette Apolo, Rue de l'indépendance, Alger"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/recu"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backcard"
+                    android:clickable="true"
+                    android:hint="Nom de la supérette"
+                    android:inputType="text"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BC7C7C7C"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/constraint1"
+                    app:layout_constraintStart_toStartOf="@id/constraint1"
+                    app:layout_constraintTop_toTopOf="@id/constraint1" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/adlam_display"
+                    android:text="Nom de la supérette"
+                    android:textColor="@color/usedred"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/editText"
+                    app:layout_constraintStart_toStartOf="@+id/editText"
+                    tools:layout_editor_absoluteY="162dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backcard"
+                    android:clickable="true"
+                    android:hint="Référence de reçu"
+                    android:inputType="text"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BC7C7C7C"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/constraint2"
+                    app:layout_constraintStart_toStartOf="@id/constraint2"
+                    app:layout_constraintTop_toTopOf="@id/constraint2"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="157dp" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/adlam_display"
+                    android:text="Référence de reçu"
+                    android:textColor="@color/usedred"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/editText1"
+                    app:layout_constraintStart_toStartOf="@+id/editText1"
+                    tools:layout_editor_absoluteY="162dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backcard"
+                    android:clickable="true"
+                    android:hint="Wilaya"
+                    android:inputType="text"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BC7C7C7C"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/constraint3"
+                    app:layout_constraintStart_toStartOf="@id/constraint3"
+                    app:layout_constraintTop_toTopOf="@id/constraint3"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="157dp" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/adlam_display"
+                    android:text="Wilaya"
+                    android:textColor="@color/usedred"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/editText2"
+                    app:layout_constraintStart_toStartOf="@+id/editText2"
+                    tools:layout_editor_absoluteY="162dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backcard"
+                    android:clickable="true"
+                    android:hint="Commune"
+                    android:inputType="text"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#BC7C7C7C"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@id/constraint4"
+                    app:layout_constraintStart_toStartOf="@id/constraint4"
+                    app:layout_constraintTop_toTopOf="@id/constraint4"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="157dp" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/adlam_display"
+                    android:text="Commune"
+                    android:textColor="@color/usedred"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/editText3"
+                    app:layout_constraintStart_toStartOf="@+id/editText3"
+                    tools:layout_editor_absoluteY="162dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bigcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="@font/adlam_display"
+                            android:text="Nos Produits"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textView35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:fontFamily="@font/adlam_display"
+                            android:text="Quantité livrée"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerproduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:backgroundTint="@color/usedred"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginVertical="5dp"
+                app:srcCompat="@drawable/scanner_" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="1dp"
+                android:fontFamily="@font/adlam_display"
+                android:text="Scanner Votre Reçu"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/slide"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:area_margin="5dp"
+        app:border_radius="40dp"
+        app:bounce_on_start="true"
+        app:inner_color="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:outer_color="@color/usedred"
+        app:slider_locked="false"
+        app:text="Je suis arrivé !"
+        app:text_size="18sp"
+        app:text_style="bold"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

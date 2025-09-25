@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">nougatbora</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="maps_api">AIzaSyA9GWlmy5YiXZd2vQnQEjGn8eHts8XSxX0</string>
+</resources>

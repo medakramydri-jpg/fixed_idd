@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".monstock">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:id="@+id/welilah"
+               android:layout_width="35dp"
+               android:layout_height="35dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               app:srcCompat="@drawable/arroback" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Mon stock"
+               android:textAlignment="center"
+               android:layout_gravity="center"
+               android:textColor="@color/usedred"
+               android:textSize="20sp"
+
+               android:fontFamily="@font/adlam_display" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               />
+
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           android:layout_marginBottom="15dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginHorizontal="10dp"
+               android:fontFamily="@font/adlam_display"
+               android:text="Les Produits"
+               android:textAlignment="center"
+               android:textColor="@color/black"
+               android:textSize="20sp" />
+
+           <TextView
+               android:id="@+id/textView35"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginHorizontal="10dp"
+               android:fontFamily="@font/adlam_display"
+               android:text="Quantité restante"
+               android:textAlignment="center"
+               android:textColor="@color/black"
+               android:textSize="20sp" />
+       </LinearLayout>
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:scrollbarAlwaysDrawHorizontalTrack="false"
+           android:scrollbars="none">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_marginBottom="10dp"
+                   app:cardCornerRadius="10dp"
+                   app:cardMaxElevation="5dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal">
+
+                       <androidx.cardview.widget.CardView
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"
+                           app:cardCornerRadius="0dp">
+
+                           <ImageView
+                               android:layout_width="85dp"
+                               android:layout_height="100dp"
+                               android:layout_gravity="center"
+                               app:srcCompat="@drawable/nougatt" />
+                       </androidx.cardview.widget.CardView>
+
+                       <TextView
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="Nougat Bora"
+                           android:textAlignment="center"
+                           android:textColor="#fdaa31"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2" />
+
+                       <TextView
+                           android:id="@+id/t1"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:layout_weight="1"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="0"
+                           android:textAlignment="center"
+                           android:textColor="@color/black"
+                           android:textSize="30sp" />
+
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_marginBottom="10dp"
+                   app:cardCornerRadius="10dp"
+                   app:cardMaxElevation="5dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal">
+
+                       <androidx.cardview.widget.CardView
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"
+                           app:cardCornerRadius="0dp">
+
+                           <ImageView
+                               android:layout_width="85dp"
+                               android:layout_height="100dp"
+                               android:layout_gravity="center"
+                               app:srcCompat="@drawable/barcereal" />
+                       </androidx.cardview.widget.CardView>
+
+                       <TextView
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="Bar Céréale \nBora"
+                           android:textAlignment="center"
+                           android:textColor="#dc583e"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2" />
+
+                       <TextView
+                           android:id="@+id/t2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:layout_weight="1"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="0"
+                           android:textAlignment="center"
+                           android:textColor="@color/black"
+                           android:textSize="30sp" />
+
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_marginBottom="10dp"
+                   app:cardCornerRadius="10dp"
+                   app:cardMaxElevation="5dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal">
+
+                       <androidx.cardview.widget.CardView
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"
+                           app:cardCornerRadius="0dp">
+
+                           <ImageView
+                               android:layout_width="85dp"
+                               android:layout_height="100dp"
+                               android:layout_gravity="center"
+                               app:srcCompat="@drawable/boramarron" />
+                       </androidx.cardview.widget.CardView>
+
+                       <TextView
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="Choco Bora\nMarron"
+                           android:textAlignment="center"
+                           android:textColor="#9d5629"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2" />
+
+                       <TextView
+                           android:id="@+id/t3"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:layout_weight="1"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="0"
+                           android:textAlignment="center"
+                           android:textColor="@color/black"
+                           android:textSize="30sp" />
+
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_marginBottom="10dp"
+                   app:cardCornerRadius="10dp"
+                   app:cardMaxElevation="5dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal">
+
+                       <androidx.cardview.widget.CardView
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"
+                           app:cardCornerRadius="0dp">
+
+                           <ImageView
+                               android:layout_width="80dp"
+                               android:layout_height="115dp"
+                               android:layout_gravity="center_horizontal"
+                               app:srcCompat="@drawable/borablanc" />
+                       </androidx.cardview.widget.CardView>
+
+                       <TextView
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="Choco Bora\nBlanc"
+                           android:textAlignment="center"
+                           android:textColor="#a4968e"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2" />
+
+                       <TextView
+                           android:id="@+id/t4"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:layout_weight="1"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="0"
+                           android:textAlignment="center"
+                           android:textColor="@color/black"
+                           android:textSize="30sp" />
+
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_marginBottom="10dp"
+                   app:cardCornerRadius="10dp"
+                   app:cardMaxElevation="5dp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal">
+
+                       <androidx.cardview.widget.CardView
+                           android:layout_width="80dp"
+                           android:layout_height="80dp"
+                           app:cardCornerRadius="0dp">
+
+                           <ImageView
+                               android:layout_width="85dp"
+                               android:layout_height="120dp"
+                               android:layout_gravity="center"
+                               app:srcCompat="@drawable/boranoir" />
+                       </androidx.cardview.widget.CardView>
+
+                       <TextView
+
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="Choco Bora\nNoir"
+                           android:textAlignment="center"
+                           android:textColor="#352401"
+                           android:textSize="20sp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="2" />
+
+                       <TextView
+                           android:id="@+id/t5"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:layout_marginHorizontal="10dp"
+                           android:layout_weight="1"
+                           android:fontFamily="@font/adlam_display"
+                           android:text="0"
+                           android:textAlignment="center"
+                           android:textColor="@color/black"
+                           android:textSize="30sp" />
+
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+       </ScrollView>
+
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
