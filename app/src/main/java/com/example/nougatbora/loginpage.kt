@@ -62,9 +62,6 @@ class loginpage : AppCompatActivity() {
 
                 val userId = authResponse.user.UserId
                 val role = authResponse.user.role
-                // Suppose 'response' is your ProfileResponse
-                Toast.makeText(this, "User ID = ${authResponse.user.UserId}", Toast.LENGTH_LONG).show()
-
 
                 if (role == "driver" && authResponse.driver == null) {
                     // Fetch driver details from API
