@@ -1,4 +1,3 @@
-
 package com.example.nougatbora
 
 import android.util.Log
@@ -19,23 +18,30 @@ class ProductsVM(private val repository: AuthRepository) : ViewModel() {
         viewModelScope.launch {
             try {
                 isLoading.postValue(true)
-                errorMessage.postValue(null) // Clear previous errors
+                errorMessage.postValue(null)
 
                 Log.d("ProductsVM", "=== API CALL START ===")
                 Log.d("ProductsVM", "URL: https://warehouse-backend-ru6r.onrender.com/api/drivers/$driverId")
                 Log.d("ProductsVM", "Driver ID: '$driverId'")
                 Log.d("ProductsVM", "Token preview: ${token.take(20)}...")
 
-                // Add coroutine timeout as backup (90 seconds)
                 val driver = withTimeout(90000) {
                     repository.getDriverById(driverId, token)
                 }
 
                 Log.d("ProductsVM", "✅ API SUCCESS!")
                 Log.d("ProductsVM", "Driver name: ${driver.name}")
-                Log.d("ProductsVM", "Products count: ${driver.products.size}")
 
-                products.postValue(driver.products)
+                // ✅ FIX: Gestion du null safety
+                val productsList = driver.products ?: emptyList()
+                Log.d("ProductsVM", "Products count: ${productsList.size}")
+
+                products.postValue(productsList)
+
+                // Message informatif si aucun produit
+                if (productsList.isEmpty()) {
+                    errorMessage.postValue("Aucun produit assigné pour le moment")
+                }
 
             } catch (e: kotlinx.coroutines.TimeoutCancellationException) {
                 Log.e("ProductsVM", "❌ TIMEOUT after 90 seconds")
